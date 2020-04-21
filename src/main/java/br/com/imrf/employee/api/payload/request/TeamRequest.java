@@ -1,10 +1,6 @@
 package br.com.imrf.employee.api.payload.request;
 
-import java.util.Date;
-
 import org.hibernate.validator.constraints.NotBlank;
-
-import br.com.imrf.employee.model.Team;
 
 public class TeamRequest {
 
@@ -23,10 +19,6 @@ public class TeamRequest {
 	 */
 	public void setName(String name) {
 		this.name = name;
-	}
-	
-	public static Team toEntity(TeamRequest teamRequest) {
-		return new Team(teamRequest.getName(), new Date());
 	}
 
 }

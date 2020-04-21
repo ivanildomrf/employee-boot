@@ -51,8 +51,7 @@ public class Person implements Serializable, Identidade, Ordenacao {
 		this.id = id;
 	}
 
-	@Column(name = "email", nullable = false, length = 100)
-	@NotNull
+	@Column(name = "email", length = 100)
 	public String getEmail() {
 		return email;
 	}
@@ -117,6 +116,7 @@ public class Person implements Serializable, Identidade, Ordenacao {
 
 	@ManyToOne
 	@JoinColumn(name = "team")	
+	@Transient
 	public Team getTeam() {
 		return team;
 	}

@@ -3,7 +3,7 @@ package br.com.imrf.employee.api.payload.request;
 import java.io.IOException;
 import java.util.Date;
 
-import org.hibernate.validator.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 import br.com.imrf.employee.model.Address;
 import br.com.imrf.employee.model.Person;
@@ -11,37 +11,33 @@ import br.com.imrf.employee.model.Team;
 
 public class PersonRequest {
 
-	@NotBlank
+	@NotNull
 	private String name;
 
-	@NotBlank
+	@NotNull
 	private Date birthDate;
 
-	@NotBlank
+	@NotNull
 	private String street;
 
-	@NotBlank
+	@NotNull
 	private Integer homeNumber;
 
-	@NotBlank
+	@NotNull
 	private String complement;
 
-	@NotBlank
+	@NotNull
 	private String neighborhood;
 
-	@NotBlank
+	@NotNull
 	private String city;
 
-	@NotBlank
+	@NotNull
 	private String state;
 
-	@NotBlank
+	@NotNull
 	private Date hiringDate;
 
-	@NotBlank
-	private Object photo;
-
-	@NotBlank
 	private String teamName;
 
 	/**
@@ -168,20 +164,6 @@ public class PersonRequest {
 	 */
 	public void setHiringDate(Date hiringDate) {
 		this.hiringDate = hiringDate;
-	}
-
-	/**
-	 * @return the photo
-	 */
-	public Object getPhoto() {
-		return photo;
-	}
-
-	/**
-	 * @param photo the photo to set
-	 */
-	public void setPhoto(Object photo) {
-		this.photo = photo;
 	}
 
 	/**
